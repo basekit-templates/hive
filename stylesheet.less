@@ -11,7 +11,15 @@
     display: -ms-flexbox;
     display: -webkit-flex;
     flex-direction: column;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -webkit-flex-direction: column;
     flex-wrap: wrap;
+    -webkit-flex-flow: column wrap;
+    -moz-flex-flow: column wrap;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
     align-items: flex-start;
     position: fixed;
     height: 100%;
@@ -32,6 +40,10 @@
     @media @tablet {
         .companylogo, .info-one, .info-two, .nav {
             width: 100%;
+            -webkit-flex: 1 100%;
+            -moz-flex: 1 100%;
+            -ms-flex: 1 100%;
+            flex: 1 100%;
         }
         .companylogo {
             order: 2;
@@ -57,6 +69,10 @@
         }
         .info-two {
             order:4;
+            -webkit-box-ordinal-group: 4;
+            -moz-box-ordinal-group: 4;
+            -ms-flex-order: 4;
+            -webkit-order: 4;
         }
     }
 }
