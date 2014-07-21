@@ -1,0 +1,32 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bk-pt-default">
+
+    <div class="logo-nav-info clearfix">
+        <div class="companylogo">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        </div>
+        <div class="info-one">
+            {{widget('profile', 'phone', {'profileType':'phone'})|raw}}
+        </div>
+        <div class="nav">
+            {{widget('extendednavigation', 'extendednav', {"align":"left"})|raw}}
+        </div>
+        <div class="info-two">
+            {{widget('profile', 'socialicons', {'profileType':'socialicons'})|raw}}
+        </div>
+    </div><!-- end logo-nav-info -->
+
+<div class="zone-area clearfix">
+
+    <div class="main wrapper clearfix">
+        {{zone('main')|raw}}
+    </div>  <!-- end main -->
+</div><!-- end zone-area -->
+
+</div><!-- end bk-pt-default -->
+
+{% endblock %}

@@ -1,0 +1,157 @@
+@import "@{templateCommon}/basekit-bootstrap.less";
+
+/* ===============================
+   LOGO, NAV AND PROFILE WIDGETS
+   =============================== */
+
+   .logo-nav-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    position: fixed;
+    height: 100%;
+    width: 25%;
+    padding: 2.5em;
+    background-color: @color-swatch7;
+    @media only screen and (min-width: 1400px) {
+        width: 312px;
+    }
+    @media @tablet {
+        width: 100%;
+        position: relative;
+        padding: 0 5%;
+    }
+    .companylogo, .info-one, .info-two, .nav {
+        margin-bottom: 2em;
+    }
+    @media @tablet {
+        .companylogo, .info-one, .info-two, .nav {
+            width: 100%;
+        }
+        .companylogo {
+            order: 2;
+        }
+        .info-one {
+            order:3;
+        }
+        .nav {
+            order: 1;
+            min-height: 45px;
+        }
+        .info-two {
+            order:4;
+        }
+    }
+}
+
+/* ===============================
+   MAIN FEATURE AND ZONE-AREA
+   =============================== */
+
+body {
+    background-color: darken(@color-swatch1,5%);
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0;
+    @media only screen and (min-width: 1140px) {
+        width: 1024px;
+        margin: 0;
+    }
+}
+
+.main {
+    padding: 5%;
+    background-color: @color-swatch1;
+}
+
+section {
+    width: 100%;
+    @media only screen and (min-width: 1140px) {
+        width: 1024px;
+    }
+}
+
+.zone-area {
+    padding-left: 25%;
+    @media only screen and (min-width: 1400px) {
+        padding-left: 312px;
+    }
+    @media @tablet {
+        padding-left:0;
+    }
+}
+
+/* MAIN FEATURE */
+
+.widget.feature .feature-bgimg .content {
+    vertical-align: bottom;
+    .spare {
+        padding: 0 5%;
+        background-color: lighten(@color-swatch1, 50%);
+        width: 50%;
+        float: right;
+        text-align: right;
+        padding-top: 2em;
+        @media only screen and (max-width: 1400px) {
+            background-color: hsla(hue(@color-swatch1), saturation(@color-swatch1), lightness(lighten(@color-swatch1,10%)), 0.7);
+            width: 100%;
+            text-align: left;
+            float: left;
+        }
+    }
+}
+
+.widget.feature button { 
+    background-color: @color-swatch2;
+    color: @color-swatch4;
+}
+
+/* ===============================
+   EXTENDED NAVIGATION
+   =============================== */
+
+div.widget {
+    &.extendednavigation {
+        width: 100%;
+        ul {
+            li:first-child {
+                border-top: 1px solid lighten(@color-swatch7,5%);
+            }
+            li {
+                width: 100%;
+                border-bottom: 1px solid lighten(@color-swatch7,5%);
+                a, .text {
+                    padding: 15px 0;
+                    width: 100%;
+                }
+                ul {
+                    width: 100%;
+                    li {
+                        background-color: @color-swatch7;
+                        a {
+                            padding: 0;
+                        }
+                        .text {
+                            padding: 15px 0;
+                        }
+                    }
+                }
+            }
+        }
+        a {
+            &.pull {
+                @media @tablet {
+                    top: 15px;
+                    left:0;
+                    width: 26px;
+                    height: 26px;
+                    &:after {
+                    }
+                }
+            }
+        }
+    }
+}
