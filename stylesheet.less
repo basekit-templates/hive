@@ -1,14 +1,6 @@
 @import "@{templateCommon}/basekit-bootstrap.less";
 
 
-.bk-pt-default {
-
-}
-
-
-
-
-
 /* ===============================
    LOGO, NAV AND PROFILE WIDGETS
    =============================== */
@@ -27,7 +19,7 @@
     @media @tablet {
         width: 100%;
         position: relative;
-        padding: 0 5%;
+        padding: 0;
         height: auto;
         overflow-y: initial;
         overflow-x: initial;
@@ -94,6 +86,9 @@
             }
         }
     }
+    .companylogo, .info-one, .info-two {
+        padding: 0 5%;
+    }
     @media @tablet {
         .companylogo, .info-one, .info-two, .nav {
             width: 100%;
@@ -148,8 +143,11 @@ body {
 }
 
 .main {
-    padding: 5%;
     background-color: @color-swatch1;
+    padding: 4em;
+    @media @tablet {
+        padding: 0;
+    }
 }
 
 .mainfeature {
@@ -198,30 +196,52 @@ body {
    EXTENDED NAVIGATION
    =============================== */
 
+.nav {
+    @media @tablet {
+        background-color: darken(@color-swatch7,3%); 
+    }
+}
+
 div.widget {
     &.extendednavigation {
-        width: 100%;
+        width: 90%;
+        margin: 0 5%;
         ul {
             li:first-child {
-                border-top: 1px solid lighten(@color-swatch7,5%);
+                border-top: 1px solid darken(@color-swatch7,7%);
             }
             li {
                 width: 100%;
-                border-bottom: 1px solid lighten(@color-swatch7,5%);
+                border-bottom: 1px solid darken(@color-swatch7,7%);
+                @media @tablet {
+                    padding: 0;
+                }
                 a, .text {
                     padding: 15px 0;
                     width: 100%;
+                    @media @tablet {
+                        padding: 15px 0;
+                    }
                 }
                 ul {
                     width: 100%;
+                    margin: 0;
                     li {
-                        background-color: @color-swatch7;
+                        background-color: darken(@color-swatch7,3%);
+                        @media @tablet {
+                            background-color: darken(@color-swatch7,5%);
+                        }
                         a {
                             padding: 0;
                         }
                         .text {
-                            padding: 15px 0;
+                            padding: 15px 5px;
                         }
+                    }
+                }
+                &:hover ul {
+                    @media @tablet {
+                        margin: 0;
                     }
                 }
             }
@@ -230,9 +250,10 @@ div.widget {
             &.pull {
                 @media @tablet {
                     top: 15px;
-                    left:0;
+                    left:50%;
                     width: 26px;
                     height: 26px;
+                    margin-left: -13px;
                     &:after {
                     }
                 }
