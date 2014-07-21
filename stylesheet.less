@@ -1,5 +1,14 @@
 @import "@{templateCommon}/basekit-bootstrap.less";
 
+
+.bk-pt-default {
+
+}
+
+
+
+
+
 /* ===============================
    LOGO, NAV AND PROFILE WIDGETS
    =============================== */
@@ -25,6 +34,8 @@
     height: 100%;
     width: 25%;
     padding: 2.5em;
+    overflow-y: auto;
+    overflow-x: hidden;
     background-color: @color-swatch7;
     @media only screen and (min-width: 1400px) {
         width: 312px;
@@ -33,17 +44,19 @@
         width: 100%;
         position: relative;
         padding: 0 5%;
+        height: auto;
     }
     .companylogo, .info-one, .info-two, .nav {
         margin-bottom: 2em;
+        display: inline-block;
+        -webkit-flex: 1 0;
+        -moz-flex: 1 0;
+        -ms-flex: 1 0;
+        flex: 1 0;
     }
     @media @tablet {
         .companylogo, .info-one, .info-two, .nav {
             width: 100%;
-            -webkit-flex: 1 100%;
-            -moz-flex: 1 100%;
-            -ms-flex: 1 100%;
-            flex: 1 100%;
         }
         .companylogo {
             order: 2;
