@@ -3,20 +3,22 @@
 {% block content %}
 
 <div class="bk-pt-homepage">
-  <div class="logo-nav-info clearfix">
-        <div class="companylogo">
-            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-        </div>
-        <div class="info-one">
-            {{widget('profile', 'phone', {'profileType':'phone'})|raw}}
-        </div>
-        <div class="nav">
-            {{widget('extendednavigation', 'extendednav', {"align":"left"})|raw}}
-        </div>
-        <div class="info-two">
-            {{widget('profile', 'socialicons', {'profileType':'socialicons'})|raw}}
-        </div>
+    <div class="logo-nav-info clearfix">
+        <div class="flexcontainer">
+            <div class="companylogo">
+                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+            </div>
+            <div class="info-one">
+                {{widget('profile', 'phone', {'profileType':'phone'})|raw}}
+            </div>
+            <div class="nav">
+                {{widget('extendednavigation', 'extendednav', {"align":"left"})|raw}}
+            </div>
+            <div class="info-two">
+                {{widget('profile', 'socialicons', {'profileType':'socialicons'})|raw}}
+            </div>
+        </div><!-- end flex-container -->
     </div><!-- end logo-nav-info -->
 
 <div class="zone-area clearfix">
