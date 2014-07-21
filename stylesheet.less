@@ -73,6 +73,7 @@
     .companylogo, .info-one, .info-two, .nav {
         margin-bottom: 2em;
         display: inline-block;
+        width: 100%;
         @media @tablet {
             -webkit-box-flex: 0;
             -moz-box-flex: 0;
@@ -86,6 +87,12 @@
     }
     .companylogo {
         margin-top:1.4em;
+        .widget.logo .logo img {
+            max-width: 100%;
+            @media @tablet {
+                max-width: 275px;
+            }
+        }
     }
     @media @tablet {
         .companylogo, .info-one, .info-two, .nav {
