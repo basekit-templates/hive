@@ -144,6 +144,100 @@ body {
 }
 
 /* ===============================
+    PROFILE WIDGETS IN HEADER
+   =============================== */
+
+.widget.companyname a:hover {
+    color: @color-swatch2;
+}
+
+.logo-nav-info .flexcontainer .widget.profile {
+    .bk-profile-phone {
+        background-size: 32px;
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: transparent;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        border: none;
+        padding: 15px 10px 15px 40px;
+        color: @color-swatch6;
+        width: 100%;
+        display: inline-block;
+        font-size: bkscale(@font-swatch5-font-size,1.1);
+        line-height: bkscale(@font-swatch5-line-height,1.1);
+        color: @color-swatch2;
+        margin: 1em 0 2em;
+        @media @tablet {
+            margin: 0;
+        }
+        &:before { 
+            content: "";
+            background-image: image('/images/social/phone.png');
+            background-position: center;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left: 0;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            border-radius: 50px;
+        }
+    }
+    .bk-profile-address p, .bk-profile-headline, .bk-profile-strapline, .bk-profile-companydescription, .bk-profile-business, .bk-profile-copyright, .twitter .twitter-content p {
+        color: @color-swatch6;
+        padding: 0;
+    }
+    .bk-profile-email a {
+        color: @color-swatch2;
+    }
+    ul.twitter {
+        .twitter-profile-pic {
+            display: none;
+        }
+        div.twitter-content, time, span {
+            display: inline-block;
+            vertical-align: top;
+            color: @color-swatch6;
+        }
+        .twitter-content {
+            p {
+                padding-bottom: 0;
+                color: @color-swatch6;
+            }
+            .bk-full-name, p a {
+                color: @color-swatch2;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    form fieldset input {
+        width: 100%;
+        margin-bottom: 10px;
+        @media @mobile {
+            margin-bottom: 20px;
+        }
+    }
+    form button.btn {
+        background-color: @color-swatch2;
+        color: @color-swatch3;
+        @media @mobile {
+            width: 100%;
+        }
+    }
+}
+
+
+.svg .logo-nav-info .flexcontainer .widget.profile .bk-profile-phone:before { 
+    background-image: image('/images/social/phone.svg');
+}
+
+
+/* ===============================
    MAIN FEATURE AND ZONE-AREA
    =============================== */
 
@@ -308,53 +402,7 @@ div.widget {
     }
 }
 
-/* ===============================
-    PROFILE WIDGETS IN HEADER
-   =============================== */
 
-.widget.companyname a:hover {
-    color: @color-swatch2;
-}
-
-
-.logo-nav-info .flexcontainer .info-one .widget.profile span {
-    background-size: 32px;
-    width: 30px;
-    height: 30px;
-    border: none;
-    background-color: transparent;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    border: none;
-    padding: 15px 10px 15px 40px;
-    color: @color-swatch6;
-    width: 100%;
-    display: inline-block;
-    font-size: bkscale(@font-swatch5-font-size,1.1);
-    line-height: bkscale(@font-swatch5-line-height,1.1);
-    color: @color-swatch2;
-    margin: 1em 0;
-    @media @tablet {
-        margin: 0;
-    }
-    &:before { 
-        content: "";
-        background-image: image('/images/social/phone.png');
-        background-position: center;
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        left: 0;
-        -webkit-border-radius: 50px;
-        -moz-border-radius: 50px;
-        border-radius: 50px;
-    }
-}
-
-.svg .logo-nav-info .flexcontainer .info-one .widget.profile span:before { 
-    background-image: image('/images/social/phone.svg');
-}
 
 
 /* ===============================
@@ -699,24 +747,12 @@ button.btn,
 }
 
 .twitter-content {
-    padding-left: 70px;
+    padding-left: 80px;
     @media @mobile {
         padding-left: 0;
     }
 }
 
-.widget.profile ul.twitter {
-    .twitter-profile-pic, div.twitter-content, time, span {
-        display: inline-block;
-        vertical-align: top;
-    }
-    .twitter-content {
-        padding-left: 10px;
-        p {
-            padding-bottom: 0;
-        }
-    }
-}
 
 /* ===============================
     DIVIDER WIDGET
