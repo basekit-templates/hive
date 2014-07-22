@@ -245,6 +245,21 @@ div.widget {
                         padding: 15px 0;
                     }
                 }
+                &.folder {
+                    margin-right: 0;
+                    .text {
+                        padding-right: 40px;
+                    }
+                    &:after {
+                        right: 20px;
+                        top: 45%;
+                    }
+                }
+                &.selected {
+                    a, .text {
+                        color:@color-swatch2;
+                    }
+                }
                 ul {
                     width: 100%;
                     margin: 0;
@@ -262,6 +277,9 @@ div.widget {
                     }
                 }
                 &:hover ul {
+                    li.selected a .text, li:hover a .text {
+                        color:@color-swatch2;
+                    }
                     @media @tablet {
                         margin: 0;
                     }
