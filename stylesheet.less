@@ -311,7 +311,20 @@ body {
 
 .widget.feature button { 
     background-color: @color-swatch2;
-    color: @color-swatch4;
+    color: @color-swatch3;
+    &:hover {
+        background-color: @font-swatch7-background-color;
+        color: @font-swatch7-color;
+        .btnText:after {
+            color: @color-swatch6;
+        }
+    }
+    .btnText:after {
+        content: "\00BB";
+        color: @color-swatch3;
+        top: 8px;
+        padding-left: 10px;
+    }
 }
 
 /* ===============================
