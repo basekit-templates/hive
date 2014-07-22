@@ -218,12 +218,15 @@ body {
 
 div.widget {
     &.extendednavigation {
+        float: left;
         @media @tablet {
             width: 90%;
             margin: 0 5%;
         }
         ul {
-            padding-top: 45px;
+            @media @tablet {
+                padding-top: 45px;
+            }
             li:first-child {
                 border-top: 1px solid darken(@color-swatch7,7%);
             }
