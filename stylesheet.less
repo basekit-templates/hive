@@ -641,6 +641,59 @@ select[name="displayCount"] {
     margin-bottom: 5px;
 }
 
+/* Contacct Form - Validation Messages */
+
+.contactform .overlay.fail {
+  .message-box {
+    background-color: #FCF6AE;
+    text-align: center;
+    padding: 12px 0 15px;
+    margin: 1em auto;
+    .border-radius(3px);
+    .message-text {
+        font-family: @font-swatch5-font-family;
+        color: #000000;
+        font-size: @font-swatch5-font-size;
+        font-weight: @font-swatch5-font-weight;
+        line-height: @font-swatch5-line-height;
+    }
+    :before {
+      content: "\2718";
+      background-image: none;
+      color: red;
+      top: 0;
+      font-size: 1.5em;
+      padding-right: 10px;
+    }
+  }
+}  
+
+.contactform .overlay.success {
+  .message-box {
+    background-color: #6cbd44;
+    text-align: center;
+    padding: 12px 0 15px;
+    margin: 1em auto;
+    .border-radius(3px);
+    .message-text {
+        font-family: @font-swatch5-font-family;
+        color: #ffffff;
+        font-size: @font-swatch5-font-size;
+        font-weight: @font-swatch5-font-weight;
+        line-height: @font-swatch5-line-height;
+    }
+    :before {
+      content: "\2713";
+      background-image: none;
+      color: white;
+      top: 0;
+      font-size: 1.5em;
+      padding-right: 10px;
+    }
+  }
+}   
+
+
 /* ===============================
  BUTTONS
 =============================== */
@@ -654,8 +707,9 @@ button.btn,
 .blogsearch form button, 
 .checkout-order-button, 
 .checkout-empty-link,
-.tweet a,
+.widget.tweet a,
 .widget.paypalbuynow .widget.button.paypal,
+.widget.dropbox button,
 .blog-post-more-link a,
 .blog-list-footer a,
 .form-group.productlist-search .btn {
@@ -685,7 +739,7 @@ button.btn,
 }
 
 
-.tweet {
+.widget.tweet {
     margin: 5px 0;
 }
 
@@ -695,6 +749,12 @@ button.btn,
             .border-radius(3px);
             margin: 5px 0;
             padding: 15px 15px 15px 38px;
+        }
+    }
+    a:hover {
+        @media @mobile {
+        background-color: @color-swatch2;
+        color: @color-swatch3;
         }
     }
 }
@@ -725,9 +785,13 @@ button.btn,
     background-image: image('/images/basketicon.png');
 }
 
-.widget.paypalbuynow .widget.button.paypal {
+.widget.paypalbuynow .widget.button.paypal, .widget.dropbox button {
     background-position: 20px;
     padding: 10px 20px 10px 48px;
+}
+
+.widget.tweet a {
+    padding: 12px 15px 12px 40px;
 }
 
 /* SVG Icons */
@@ -770,21 +834,24 @@ button.btn,
     }
 }
 
-.twitter-profile-pic {
-    width: 60px;
-    margin-top: 5px;
-    a img {
-        width: 100%;
+ul.twitter {
+    .twitter-profile-pic {
+        margin-right: 10px;
+        margin-top: 4px;
+        a img {
+            width: 48px;
+        }
+    }
+    .twitter-content {
+        padding-left: 68px;
+        p {
+            padding-bottom: 0;
+        }
+        time {
+            font-size: @font-swatch5-font-size;
+        }
     }
 }
-
-.twitter-content {
-    padding-left: 80px;
-    @media @mobile {
-        padding-left: 0;
-    }
-}
-
 
 .widget.profile ul.twitter {
         .twitter-profile-pic, div.twitter-content, time, span {
@@ -808,9 +875,6 @@ button.btn,
         }
     }
 
-
-
-
 /* ===============================
     DIVIDER WIDGET
    =============================== */
@@ -821,7 +885,6 @@ hr {
         height: 1px;
     }
 }
-
 
 /* ===============================
    SLIDESHOW WIDGET
