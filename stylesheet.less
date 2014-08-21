@@ -571,9 +571,6 @@ div.widget {
                 display: block;
             }
         }
-        button.blog-search-submit-button {
-            padding: 7px 15px 10px;
-        }
     }
 }
 
@@ -604,6 +601,7 @@ select {
 select[name="displayCount"] {
     margin-bottom: 0;
 }
+
 .contactform, 
 .widget.signupform form fieldset, 
 .blogsearch form, 
@@ -734,8 +732,15 @@ button.btn,
     }
 } 
 
-.widget.profile form button.btn {
-    padding: 7px 15px 10px;
+.blog-post-more-link a:hover {
+     border: 1px solid @color-swatch2;
+}
+
+.widget.profile form button.btn, .signupform fieldset button, .blogsearch form button.blog-search-submit-button {
+    padding: 0 15px;
+    height: 42px;
+    position: relative;
+    top: 1px;
 }
 
 
@@ -1256,12 +1261,24 @@ hr {
         margin-right: 5px;
         &.btn.facebook {
             background-color: #3b5998;
+            &:hover {
+              background-color: lighten(#3b5998,10%);
+              color: #ffffff;
+            }
         }
         &.btn.twitter {
             background-color: #4099FF;
+            &:hover {
+              background-color: lighten(#4099FF,10%);
+              color: #ffffff;
+            }
         }
         &.btn.googleplus {
             background-color: #d34836;
+            &:hover {
+              background-color: lighten(#d34836,10%);
+              color: #ffffff;
+            }
         }
     }
 }
